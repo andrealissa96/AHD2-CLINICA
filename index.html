@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AHD2</title>
+
+    <script
+  src="https://code.jquery.com/jquery-4.0.0.js"
+  integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
+  crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.23.0/sweetalert2.css" integrity="sha512-/j+6zx45kh/MDjnlYQL0wjxn+aPaSkaoTczyOGfw64OB2CHR7Uh5v1AML7VUybUnUTscY5ck/gbGygWYcpCA7w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.23.0/sweetalert2.min.js" integrity="sha512-pnPZhx5S+z5FSVwy62gcyG2Mun8h6R+PG01MidzU+NGF06/ytcm2r6+AaWMBXAnDHsdHWtsxS0dH8FBKA84FlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css" integrity="sha512-MQXduO8IQnJVq1qmySpN87QQkiR1bZHtorbJBD0tzy7/0U9+YIC93QWHeGTEoojMVHWWNkoCp8V6OzVSYrX0oQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js" integrity="sha512-K/oyQtMXpxI4+K0W7H25UopjM8pzq0yrVdFdG21Fh5dBe91I40pDd9A4lzNlHPHBIP2cwZuoxaUSX0GJSObvGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+
+
+<body>
+     <div data-aos="fade-up">
+        <h2> Registro de Citas</h2>
+        <form class="estiloform" id="formRegistro">
+
+            
+            <label>Nombre del Paciente: </label><input type="text" id="nombre" placeholder="Nombre Completo">
+            <label>Número de teléfono: </label><input type="tel" id="numero" placeholder="Teléfono">
+            <label>Correo electrónico: </label><input type="email" id="correo" placeholder="Correo">
+            <label>Fecha:</label><input type="text" id="fecha" placeholder="Fecha">
+            
+
+           <label>Hora: </label> <select id="hora" style= "width: 70px;">
+                <option value="">Hora</option>
+                <option value="8:00">8:00</option>
+                <option value="9:00">9:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+
+            </select>
+
+            <br>
+
+
+             <label>Servicio: </label><select id="servicio" style="width: 100%;">
+                <option value="">Seleccione el servicio</option>
+                <option value="Consulta Médica General">Consulta Médica General</option>
+                <option value="Laboratorio">Laboratorio</option>
+                <option value="Pediatria">Pediatría</option>
+                <option value="Nutricion">Nutrición</option>
+                <option value="Ginecologia">Ginecología</option>
+
+
+             
+            </select>
+            <br>
+            <br>
+
+<button type="submit">Registrar</button>
+        </form>
+
+            
+
+   <h2 id="tituloHistorial"></h2>
+
+<table class="tablaDatos" id="tablaHistorial" style="display: none;">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Número</th>
+            <th>Correo</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Servicio</th>
+            <th> <img src="img/borrar.png" alt=""> </th>
+        </tr>
+    </thead>
+    <tbody id="bodyTabla"></tbody>
+</table>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
